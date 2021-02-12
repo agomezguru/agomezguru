@@ -1,13 +1,12 @@
 ---
-layout: layout.hbs
+title: Funciona Wey!!!
+category: Inteligencia Artificial
+post-date: 10/Sep/2021
+reading-time: 6 min
+blurb: Cualquier texto
+layout: all-posts.hbs
 ---
 
-## Read what I have to say
+[First post](devops/post-001/index.html)
 
-[First post](posts/first-post/index.html)
-
-[Second post](posts/second-post/index.html)
-
-[Third post](posts/third-post/index.html)
-
-[Fourth post](posts/fourth-post/index.html)
+[Second post](devops/post-002/index.html)
