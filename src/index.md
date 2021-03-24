@@ -1,12 +1,13 @@
 ---
 title: Funciona Wey!!!
-category: Inteligencia Artificial
+category: DevOps
+breadcrumb: devops
 post-date: 10/Sep/2021
 reading-time: 6 min
 blurb: Cualquier texto
-layout: all-posts.hbs
+layout: all-posts.hbs 
+root: "."
 ---
 
-[First post](devops/post-001/index.html)
 
-[Second post](devops/post-002/index.html)
+
