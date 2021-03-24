@@ -114,7 +114,17 @@ dd {
   margin-left: 0; }
 
 blockquote {
-  margin: 0 0 1rem; }
+  margin-bottom: 3rem !important;
+  margin-top: 3rem !important;
+  font-size: 1.25rem; }
+  
+blockquote p {
+  position: relative;
+  position: relative;
+  line-height: 30px;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500; }
 
 b,
 strong {
@@ -9589,6 +9599,7 @@ h1 {
 
 p {
   margin: 0;
+  margin-bottom: 1.5rem;
   padding: 0;
   font-size: 16px;
   line-height: 26px;
@@ -10343,7 +10354,7 @@ h3.main-title {
   .w3l-author h1.title {
     font-size: 24px; } }
 
-h3.blog-desc-big {
+h3.blog-desc-big, h3 {
   display: block;
   font-size: 34px;
   line-height: 44px;
@@ -10356,6 +10367,11 @@ h3.blog-desc-big {
   -o-transition: .3s ease;
   max-width: 700px;
   margin: auto; }
+
+h3 {
+  margin-left: 0px;
+  margin-bottom: 1.5rem;
+}
 
 .blog-post-align {
   display: grid;
@@ -10400,6 +10416,14 @@ p.alphabet {
   display: flex;
   align-items: center;
   color: #999; }
+
+ol li {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 12px 0;
+  color: var(--heading-color);
+  list-style-type: decimal;
+  font-weight: 600; }
 
 .text-list ol li {
   font-size: 18px;
@@ -10574,7 +10598,7 @@ h4.side-title {
     height: 300px; } }
 
 @media (max-width: 736px) {
-  h3.blog-desc-big {
+  h3.blog-desc-big, h3 {
     font-size: 30px;
     line-height: 40px; }
   .left-right {
@@ -10582,7 +10606,7 @@ h4.side-title {
     grid-gap: 25px; } }
 
 @media (max-width: 568px) {
-  h3.blog-desc-big {
+  h3.blog-desc-big, h3 {
     font-size: 28px;
     line-height: 36px; } }
 
@@ -10608,7 +10632,7 @@ h4.side-title {
     height: 210px; } }
 
 @media (max-width: 384px) {
-  h3.blog-desc-big {
+  h3.blog-desc-big,h3 {
     font-size: 26px;
     line-height: 32px; }
   .blog-post-main .comments .media {
@@ -10616,7 +10640,7 @@ h4.side-title {
     grid-gap: 20px; } }
 
 @media (max-width: 375px) {
-  h3.blog-desc-big {
+  h3.blog-desc-big, h3 {
     font-size: 24px;
     line-height: 30px; }
   .post-content iframe, .sing-post-thumb iframe {
