@@ -3,6 +3,17 @@ var markdown = require("metalsmith-markdown");
 var layouts = require("metalsmith-layouts");
 var permalinks = require("metalsmith-permalinks");
 var collections = require("metalsmith-collections");
+var Handlebars = require("handlebars");
+var fs = require("fs");
+
+Handlebars.registerPartial(
+  "header",
+  fs.readFileSync(__dirname + "/layouts/partials/header.hbs").toString()
+);
+Handlebars.registerPartial(
+  "footer",
+  fs.readFileSync(__dirname + "/layouts/partials/footer.hbs").toString()
+);
 
 Metalsmith(__dirname)
   .metadata({
@@ -14,9 +25,10 @@ Metalsmith(__dirname)
       url: "http://www.metalsmith.io/",
     },
     author: "Alejandro Gómez",
+    root: "../..",
   })
   .source("./src")
-  .destination(".")
+  .destination("../gh-pages")
   .clean(false)
   .use(
     collections({
@@ -25,11 +37,14 @@ Metalsmith(__dirname)
         sortBy: "date",
         reverse: true,
       },
+      pages: {
+        pattern: "pages/**/*.md",
+      },
     })
   )
+
   .use(markdown())
   .use(permalinks())
-
   .use(
     layouts({
       engine: "handlebars",
@@ -42,7 +57,6 @@ Metalsmith(__dirname)
       },
     })
   )
-
   .build(function (err) {
     if (err) {
       console.log(err);
